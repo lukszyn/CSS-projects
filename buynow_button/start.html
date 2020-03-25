@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Przycisk 2</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: content-box;
+  }
+
+  button {
+   position: absolute;
+   bottom: 15vh;
+   right: 15vw;
+   border: 2px solid black;
+   width: 360px;
+   height: 100px;
+   background-color: #fff;
+   font-size: 40px;
+   text-transform: uppercase;
+   font-family: Arial, Helvetica, sans-serif;
+   overflow: hidden;
+   cursor: pointer;
+  }
+
+  button span {
+    display: block;
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    position: absolute;
+    top: 0;
+    transition: .2s linear;
+  }
+
+  button span:nth-child(1) {
+   left: 0;
+  }
+
+  button:hover span:nth-child(1) {
+    transform: translateX(calc(100% + 2px));
+  }
+
+  button span:nth-child(2) {
+    left: calc(-100% - 2px);
+  }
+
+  button:hover span:nth-child(2) {
+   transform: translateX(calc(100% + 2px));
+  }
+ </style>
+</head>
+
+<body>
+ <button><span>Kup teraz</span><span>Super okazja!</span></button>
+</body>
+
+</html>
